@@ -1,0 +1,30 @@
+---
+import Experience from "../components/Experience.astro";
+const experience = [
+    {
+        date: "Jan 2023",
+        title: "Cloud Developer",
+        description: "Work with LesSchwab",
+    },
+    {
+        date: "Jul 2022",
+        title: "Software Developer ( Angular + .NET )",
+        description: "Work in Camuzzi",
+    },
+    {
+        date: "May 2022",
+        title: "Backend .NET Developer",
+        description: "Working in backend omw",
+    },
+];
+---
+
+<ol class="relative border-s border-gray-200 dark:border-gray-700 ml-3">
+    {
+        experience.map((item) => (
+            <li class="mb-10 ms-4">
+                <Experience {...item} />
+            </li>
+        ))
+    }
+</ol>

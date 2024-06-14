@@ -1,0 +1,82 @@
+---
+import Layout from "../layouts/Layout.astro";
+
+import Badge from "../components/Badge.astro";
+import WrapperIcon from "../components/WrapperIcon.astro";
+import Container from "../components/Container.astro";
+import WrapperExperience from "../components/WrapperExperience.astro";
+import WrapperProject from "../components/WrapperProject.astro";
+
+import GitHub from "../icons/GitHub.astro";
+import LinkedIn from "../icons/LinkedIn.astro";
+import Mail from "../icons/Mail.astro";
+import Briefcase from "../icons/Briefcase.astro";
+import Axe from "../icons/Axe.astro";
+---
+
+<Layout
+	title="Jesus Plasencia's Portfolio - Software and Web Developer"
+	description="Jesus Plasencia is a Programmer. +2 years of experience working in Web Development and Cloud.">
+	<main>
+		<Container id="top" class="py-16 pb-10">
+			<img
+				class="self-center rounded-full size-20 lg:size-14 lg:self-start mb-5"
+				src="https://media.licdn.com/dms/image/D4E03AQErj8zJ3iZlsQ/profile-displayphoto-shrink_200_200/0/1708489211545?e=1723680000&v=beta&t=06mEj_WjmfQz5BQrOOJW-oZHWQOSPzDcJzgejySZ0Ng"
+				alt="Jesus Plasencia Photo"
+			/>
+			<h1
+				class="flex flex-col justify-center items-center text-3xl font-bold gap-x-16 pb-7 mx-5 max-w-[800px] lg:text-5xl lg:flex-row lg:mx-0 lg:justify-between"
+			>
+				Hi, I'm Jesus Plasencia!
+				<a
+					href="https://www.linkedin.com/in/jesus-plasencia/"
+					target="_blank"
+					rel="noopener"
+					class="flex justify-center items-center my-2"
+				>
+					<Badge label="Available for hire" />
+				</a>
+			</h1>
+			<h2 class="text-lg text-pretty opacity-90 mx-5 lg:mx-auto lg:text-xl max-w-[800px]">
+				<span class="text-yellow-200/90">+2 years of Experience</span>.
+				Software Developer based in <span class="text-orange-300"
+					>Lima, Peru</span
+				>.
+				<span class="text-opacity-40"
+					>Working in Spring and Cloud projects deployed in AWS.</span
+				>
+			</h2>
+
+			<nav class="flex flex-wrap gap-x-3 gap-y-3 m-6 lg:mx-0">
+				<WrapperIcon href="https://github.com/JesusPlasencia">
+					<GitHub class="size-6" />
+					GitHub
+				</WrapperIcon>
+				<WrapperIcon href="https://www.linkedin.com/in/jesus-plasencia/">
+					<LinkedIn class="size-6" />
+					LinkedIn
+				</WrapperIcon>
+				<WrapperIcon href="mailto:jesusplasencia2508@hotmail.com">
+					<Mail class="size-6"/>
+					jesusplasencia2508@hotmail.com
+				</WrapperIcon>
+			</nav>
+		</Container>
+
+		<Container id="experience" class="pl-6 pb-6 lg:pl-0">
+			<h2 class="flex items-center gap-x-3 text-xl font-semibold mb-5 lg:text-2xl">
+				<Briefcase class="size-8"/>
+				Experience
+			</h2>
+			<WrapperExperience/>
+		</Container>
+
+		<Container id="projects" class="pl-6 pb-6 lg:pl-0">
+			<h2 class="flex items-center gap-x-3 text-xl font-semibold mb-5 lg:text-2xl">
+				<Axe class="size-8"/>
+				Projects
+			</h2>
+			<WrapperProject />
+		</Container>
+	</main>
+</Layout>
